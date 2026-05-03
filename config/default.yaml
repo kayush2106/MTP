@@ -1,0 +1,79 @@
+dataset_root: data/raw/MOT17
+source_video_dir: data/source_videos
+compressed_video_dir: data/compressed_videos
+detections_dir: results/detections
+metrics_dir: results/metrics
+quality_dir: results/quality
+tables_dir: results/tables
+plots_dir: results/plots
+
+sequences:
+  - MOT17-02
+  - MOT17-04
+  - MOT17-05
+  - MOT17-09
+  - MOT17-10
+  - MOT17-11
+  - MOT17-13
+  
+
+frame_limit: 500
+fps_override: null
+
+model_name: yolov8n.pt
+confidence_threshold: 0.15
+iou_threshold_eval: 0.5
+imgsz: 1088
+
+compression_profiles:
+  - name: h264_crf22
+    codec: libx264
+    crf: 22
+    preset: veryfast
+    gop: 60
+  - name: h264_crf33
+    codec: libx264
+    crf: 33
+    preset: veryfast
+    gop: 60
+  - name: h264_crf37
+    codec: libx264
+    crf: 37
+    preset: veryfast
+    gop: 60
+  - name: h264_crf42
+    codec: libx264
+    crf: 42
+    preset: veryfast
+    gop: 60
+  - name: h264_crf47
+    codec: libx264
+    crf: 47
+    preset: veryfast
+    gop: 60
+  - name: h265_crf22
+    codec: libx265
+    crf: 22
+    preset: veryfast
+    gop: 60
+  - name: h265_crf33
+    codec: libx265
+    crf: 33
+    preset: veryfast
+    gop: 60
+  - name: h265_crf37
+    codec: libx265
+    crf: 37
+    preset: veryfast
+    gop: 60
+  - name: h265_crf42
+    codec: libx265
+    crf: 42
+    preset: veryfast
+    gop: 60
+  - name: h265_crf47
+    codec: libx265
+    crf: 47
+    preset: veryfast
+    gop: 60
+ 
